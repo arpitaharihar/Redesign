@@ -1,0 +1,42 @@
+Set-ExecutionPolicy Bypass -Scope Process -Force
+.\scripts\security\manage-external-devices.ps1 -Mode Restore
+
+
+
+
+
+
+.\scripts\security\manage-external-devices.ps1 -Mode Status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if fails:
+
+reg add HKLM\SYSTEM\CurrentControlSet\Services\USBSTOR /v Start /t REG_DWORD /d 3 /f
+
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoDriveTypeAutoRun /t REG_DWORD /d 145 /f
+
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices /v Deny_All /t REG_DWORD /d 0 /f
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices /v Deny_Read /t REG_DWORD /d 0 /f
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices /v Deny_Write /t REG_DWORD /d 0 /f
+
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\PortableDevices /v Deny_Devices /t REG_DWORD /d 0 /f
+
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions /v DenyRemovableDevices /t REG_DWORD /d 0 /f
+
+
+
+reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices /f
+reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows\PortableDevices /f
+reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions /f

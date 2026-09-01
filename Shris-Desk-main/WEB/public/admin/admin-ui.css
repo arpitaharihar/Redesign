@@ -1,0 +1,207 @@
+:root {
+  --sd-accent: #2563eb;
+  --sd-accent-2: #60a5fa;
+  --sd-deep: #0b1220;
+  --sd-ink: #101828;
+  --sd-muted: #667085;
+  --sd-surface: #ffffff;
+  --sd-bg: #f5f7fb;
+  --sd-border: rgba(15, 23, 42, 0.08);
+}
+
+body.bg-gray-200,
+.admin-shell {
+  background: var(--sd-bg) !important;
+}
+
+.main-content,
+.admin-shell .main-content {
+  background: var(--sd-bg);
+}
+
+.sidenav,
+.admin-shell .sidenav {
+  background: linear-gradient(180deg, #0b1220 0%, #111827 100%) !important;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.35);
+  border-radius: 22px;
+  width: 260px;
+  position: fixed;
+  inset-block: 16px;
+  inset-inline-start: 16px;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.sidenav .nav-link,
+.sidenav .nav-link .nav-link-text,
+.admin-shell .sidenav .nav-link,
+.admin-shell .sidenav .nav-link .nav-link-text {
+  color: #e5e7eb !important;
+  font-weight: 500;
+}
+
+.sidenav .nav-link.active {
+  background: rgba(37, 99, 235, 0.2) !important;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.25);
+}
+
+.sidenav .nav-link.active .nav-link-text {
+  color: #ffffff !important;
+}
+
+.navbar-main,
+.admin-shell .navbar-main {
+  background: transparent;
+}
+
+.navbar-main .breadcrumb .breadcrumb-item,
+.navbar-main h6,
+.admin-shell .navbar-main .breadcrumb .breadcrumb-item,
+.admin-shell .navbar-main h6 {
+  color: var(--sd-ink);
+}
+
+.card {
+  border: 1px solid var(--sd-border);
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card-header {
+  border-bottom: none !important;
+}
+
+.sd-hero {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  border-radius: 22px;
+  color: #ffffff;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.3);
+  margin-bottom: 24px;
+}
+
+.sd-hero h3 {
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.sd-card-header {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 14px 20px;
+  margin: -20px 16px 16px;
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.25);
+}
+
+.sd-table th {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sd-muted);
+}
+
+.sd-badge {
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.btn-primary,
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #2563eb, #60a5fa) !important;
+  border: none;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+}
+
+.btn-outline-secondary,
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.sd-auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.2), transparent 60%),
+    var(--sd-bg);
+  padding: 40px 16px;
+}
+
+.sd-auth-card {
+  width: min(960px, 96vw);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.16);
+  padding: 28px;
+}
+
+.sd-face-frame {
+  border-radius: 20px;
+  border: 1px dashed rgba(37, 99, 235, 0.4);
+  padding: 10px;
+}
+
+.g-sidenav-show .main-content,
+.admin-shell .main-content {
+  margin-left: 292px;
+  padding-left: 8px;
+}
+
+.sidenav .navbar-brand,
+.sidenav .navbar-brand span,
+.admin-shell .sidenav .navbar-brand,
+.admin-shell .sidenav .navbar-brand span {
+  color: #f8fafc !important;
+}
+
+.sidenav .nav-link .material-icons,
+.admin-shell .sidenav .nav-link .material-icons {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.sidenav .nav-link.active .material-icons,
+.admin-shell .sidenav .nav-link.active .material-icons {
+  color: #ffffff !important;
+}
+
+@media (max-width: 1200px) {
+  .g-sidenav-show .main-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .sidenav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    transform: translateX(-110%);
+    transition: transform 0.2s ease;
+    z-index: 1030;
+  }
+  .g-sidenav-show .sidenav {
+    transform: translateX(0);
+  }
+  .admin-shell .main-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .admin-shell .sidenav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    transform: translateX(-110%);
+    transition: transform 0.2s ease;
+    z-index: 1030;
+  }
+  .admin-shell.g-sidenav-show .sidenav {
+    transform: translateX(0);
+  }
+}
+
+.sd-face-preview {
+  max-width: 420px;
+  margin: 0 auto;
+}

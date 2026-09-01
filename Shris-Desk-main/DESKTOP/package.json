@@ -1,0 +1,79 @@
+{
+  "name": "smartdesk-v2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartDesk workforce platform with role-based dashboards, analytics, and desktop packaging.",
+  "author": "SmartDesk Team",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "dev:desktop": "concurrently -k \"npm run dev\" \"npm run dev:electron\"",
+    "dev:electron": "wait-on http://127.0.0.1:3000 && electron .",
+    "build": "next build --webpack",
+    "build:desktop": "node scripts/prepare-desktop-env.js && npm run build && node scripts/prepare-desktop.js && electron-builder",
+    "pack:desktop": "node scripts/prepare-desktop-env.js && npm run build && node scripts/prepare-desktop.js && electron-builder --dir",
+    "start": "next start",
+    "start:desktop": "node scripts/start-desktop.js",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "build": {
+    "appId": "com.smartdesk.desktop",
+    "productName": "SmartDesk Desktop",
+    "asar": false,
+    "npmRebuild": false,
+    "directories": {
+      "output": "desktop-dist"
+    },
+    "files": [
+      "electron/**/*",
+      ".next/standalone/**/*",
+      "smartdesk-desktop.env",
+      "smartdesk-desktop.env.example",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "SmartDesk-Desktop-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.10.0",
+    "@supabase/supabase-js": "^2.101.1",
+    "clsx": "^2.1.1",
+    "face-api.js": "^0.22.2",
+    "next": "16.2.2",
+    "nodemailer": "^8.0.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "concurrently": "^9.2.1",
+    "electron": "^37.4.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wait-on": "^8.0.5"
+  }
+}

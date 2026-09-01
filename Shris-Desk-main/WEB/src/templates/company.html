@@ -1,0 +1,1279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - IT Solutions Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  {% comment %} <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> {% endcomment %}
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+
+
+
+
+
+</head>
+
+<body class="index-page">
+  
+
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="{% static 'assets/img/logo.webp' %}" alt=""> -->
+        <h1 class="sitename">IT Solutions</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#recent-blog-postst">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'adminLogin' %}">Admin Login</a>
+      <a class="btn-getstarted" href="{% url 'register_applicant' %}">Application Registration</a>
+
+    </div>
+  </header>
+  
+ 
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section dark-background">
+
+
+      {% load static %}
+<div class="container">
+  <div class="row gy-4">
+    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+      <h1>Better Solutions For Your Business</h1>
+      <p>We are team of talented designers making websites with Bootstrap</p>
+      <div class="d-flex">
+        <a href="#about" class="btn-get-started">Get Started</a>
+        <a href="https://youtu.be/4c7w5_F8D1A?si=6oBjUcnqkPkq6wjp&t=5" class="glightbox btn-watch-video d-flex align-items-center">
+          <i class="bi bi-play-circle"></i><span>Watch Video</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+      <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+    </div>
+  </div>
+</div>
+</section><!-- /Hero Section -->
+
+<!-- Clients Section -->
+<section id="clients" class="clients section light-background">
+
+  <div class="container" data-aos="zoom-in">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 2,
+              "spaceBetween": 40
+            },
+            "480": {
+              "slidesPerView": 3,
+              "spaceBetween": 60
+            },
+            "640": {
+              "slidesPerView": 4,
+              "spaceBetween": 80
+            },
+            "992": {
+              "slidesPerView": 5,
+              "spaceBetween": 120
+            },
+            "1200": {
+              "slidesPerView": 6,
+              "spaceBetween": 120
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-1.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-2.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-3.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-4.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-5.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-6.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-7.webp' %}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-8.webp' %}" class="img-fluid" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Clients Section -->
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About Us</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+        <p>
+          We are a leading IT solutions provider committed to delivering cutting-edge technology services that drive innovation and efficiency. Our mission is to help businesses streamline operations and embrace digital transformation with confidence.
+
+
+
+        </p>
+        <ul>
+          <li><i class="bi bi-check2-circle"></i> <span>Custom software development tailored to client needs</span></li>
+          <li><i class="bi bi-check2-circle"></i> <span>Cloud integration & digital infrastructure modernization</span></li>
+          <li><i class="bi bi-check2-circle"></i> <span>Secure, scalable, and smart technology solutions</span></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <p>
+          From cloud integration to custom software development, we deliver reliable solutions tailored to your unique needs. Our team of experts is passionate about solving real-world challenges through smart, scalable, and secure technologies.
+        </p>
+        <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /About Section -->
+
+{% load static %}
+<!-- Why Us Section -->
+<section id="why-us" class="section why-us light-background" data-builder="section">
+  <div class="container-fluid">
+    <div class="row gy-4">
+
+      <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+          <h3><span>Why Choose Us
+ </span><strong>?</strong></h3>
+          <p>
+            At our core, we believe in delivering smart and reliable IT solutions that empower businesses to grow confidently in the digital era. Our expertise spans across cloud services, software development, cybersecurity, and infrastructure management.
+          </p>
+        </div>
+
+        <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="faq-item faq-active">
+            <h3><span>01</span>Do You Need Custom Solutions Fast?</h3>
+            <div class="faq-content">
+              <p>
+We provide tailored solutions designed to meet your unique needs—built with speed, scalability, and reliability in mind.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span>02</span> Struggling with Tech Integration?
+</h3>
+            <div class="faq-content">
+              <p>Our team helps simplify complex systems through seamless integration and user-friendly implementation.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span>03</span>  Want a Tech Partner You Can Trust?
+</h3>
+            <div class="faq-content">
+              <p>We prioritize long-term partnerships, ensuring 24/7 support, transparency, and secure technology every step of the way.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+      </div>
+
+      <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+        <img src="{% static 'assets/img/why-us.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Why Us Section -->
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+
+      <div class="col-lg-6 d-flex align-items-center">
+        <img src="{% static 'assets/img/illustration/illustration-10.webp' %}" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6 pt-4 pt-lg-0 content">
+        <h3>Delivering Real Value with Trusted IT Expertise
+
+</h3>
+        <p class="fst-italic">
+          We provide powerful, scalable IT solutions that go beyond expectations.. Our services are built on a foundation of trust, innovation, and reliability — helping you solve real business challenges with ease and efficiency.
+        </p>
+
+        <div class="skills-content skills-animation">
+          <div class="progress">
+            <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>We offer a wide range of IT solutions designed to empower your business with the latest technology and expert support.
+</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-activity icon"></i></div>
+              <h4><a href="" class="stretched-link">Custom Software Development
+</a></h4>
+              <p>Tailored applications that solve real-world business problems.
+</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="" class="stretched-link">
+Cloud Solutions</a></h4>
+              <p>Scalable and secure cloud infrastructure to drive agility.
+</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="" class="stretched-link">Cybersecurity Services
+</a></h4>
+              <p>End-to-end protection for your digital assets and data.
+</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="" class="stretched-link">IT Consulting & Support
+</a></h4>
+              <p>Strategic guidance and 24/7 support for seamless operations.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Work Process Section -->
+    <section id="work-process" class="work-process section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Work Process</h2>
+        <p>We follow a structured, client-centric process to ensure every project is executed with precision and transparency:</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/steps-1.webp' %}" alt="Step 1" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">01</div>
+                <h3>Research &amp; Analysis</h3>
+                <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue it rationally encounter consequences that are extremely painful.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Market Research</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Data Analysis</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>User Feedback</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/steps-2.webp' %}" alt="Step 2" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">02</div>
+                <h3>Design &amp; Planning</h3>
+                <p>To achieve meaningful outcomes, one must not only strive but also endure the effort required—because true value comes from what is thoughtfully created and skillfully executed.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Wireframing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>UI/UX Design</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Prototyping</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="steps-item">
+              <div class="steps-image">
+                <img src="{% static 'assets/img/steps/steps-3.webp' %}" alt="Step 3" class="img-fluid" loading="lazy">
+              </div>
+              <div class="steps-content">
+                <div class="steps-number">03</div>
+                <h3>Development &amp; Launch</h3>
+                <p>When the path is clear and the tools are in place, progress unfolds with purpose. In moments of true freedom, we discover the power to choose boldly and build brilliantly.</p>
+                <div class="steps-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Development</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Testing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle"></i>
+                    <span>Deployment</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Steps Item -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Work Process Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/bg/bg-8.webp" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Call To Action</h3>
+            <p>Ready to Transform Your Business with Smart IT Solutions?
+Let’s work together to bring your vision to life. Whether you need secure infrastructure, cloud migration, or custom software, our team is here to help you innovate and grow.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+   <!-- Team Section -->
+<section id="team" class="team section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Meet Our Expert Team
+</h2>
+    <p>Our success is driven by a passionate team of developers, analysts, designers, and tech strategists committed to delivering world-class IT solutions.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-member d-flex align-items-start">
+          <div class="pic">
+            <img src="{% static 'assets/img/person/person-m-7.webp' %}" class="img-fluid" alt="">
+          </div>
+          <div class="member-info">
+            <h4>Walter White</h4>
+            <span>Chief Executive Officer</span>
+            <p>Passionate about driving innovation and delivering excellence. Dedicated to solving challenges and leading with vision.</p>
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/person-f-8.webp' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Driven to deliver exceptional products by aligning user needs with strategic goals. Passionate about innovation and seamless user experiences.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/person-m-6.webp' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Passionate about leveraging cutting-edge technology to solve real-world problems. Committed to innovation, integrity, and scalable solutions.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/person/person-f-4.webp' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Dedicated to precision and integrity in financial reporting. Experienced in managing complex accounts and ensuring compliance with financial regulations.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+
+     {% comment %}  {% endcomment %}
+
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Pricing Plans</h2>
+    <p>We offer flexible pricing models to suit businesses of all sizes — from startups to enterprises. Choose a plan that fits your goals, scale, and budget.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-item">
+          <h3>Free Plan</h3>
+          <h4><sup>$</sup>0<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Basic access to core IT tools
+</span></li>
+            <li><i class="bi bi-check"></i> <span>Ideal for small teams or startups
+</span></li>
+            <li><i class="bi bi-check"></i> <span>Limited cloud storage included
+</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>
+Community support
+
+</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Scalable when you're ready to grow</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-item">
+          <h3>Bussiness Plan</h3>
+          <h4><sup>$</sup>29<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Advanced tools for growing teams
+
+</span></li>
+            <li><i class="bi bi-check"></i> <span>Priority support and maintenance
+
+</span></li>
+<li><i class="bi bi-check"></i> <span>Enhanced cloud storage & backups
+</span></li>
+<li><i class="bi bi-check"></i> <span>Performance analytics & reporting
+</span></li>
+<li><i class="bi bi-check"></i> <span>Scalable features to match your growth</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-item">
+          <h3>Developer Plan</h3>
+          <h4><sup>$</sup>49<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Full access to advanced development tools
+</span></li>
+            <li><i class="bi bi-check"></i> <span>API integrations & sandbox environments
+</span></li>
+            <li><i class="bi bi-check"></i> <span>Premium cloud resources and uptime monitoring
+</span></li>
+            <li><i class="bi bi-check"></i> <span>Dedicated technical support
+
+</span></li>
+            
+          </ul>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+
+      {% comment %} <!-- Repeat for Business Plan and Developer Plan -->
+      <!-- No image in pricing section, so no need for {% static %} here --> {% endcomment %}
+    </div>
+  </div>
+</section>
+
+    <!-- Testimonials Section -->
+   <section id="testimonials" class="testimonials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>
+“Working with this team has been a game-changer. Their IT expertise and timely support helped scale our operations with confidence.”</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img/person/person-m-9.webp' %}" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Their strategic approach and flawless execution made a huge difference to our project. Truly reliable professionals...</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img/person/person-f-5.webp' %}" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Exceptional service and support! The team delivered a seamless solution tailored to our creative workflow...</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img/person/person-f-12.webp' %}" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>They built us a custom platform that streamlined our business operations. Highly recommended...</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img/person/person-m-12.webp' %}" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Efficient, transparent, and technically brilliant. A partner you can truly count on...</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img/person/person-m-13.webp' %}" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Exceptional service and support! The team delivered a seamless solution tailored to our creative workflow...</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+
+    {% load static %}
+
+<!-- Faq 2 Section -->
+<section id="faq-2" class="faq-2 section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+    <p>We are dedicated to delivering innovative and reliable IT solutions that solve real-world business challenges. Our commitment to quality, transparency, and customer satisfaction ensures that every project is executed with excellence and integrity.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10">
+
+        <div class="faq-container">
+
+          <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>What kind of IT services do you offer?
+</h3>
+            <div class="faq-content">
+              <p>We provide end-to-end solutions including cloud services, cybersecurity, custom software development, and IT consulting.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>Can you tailor solutions to fit our specific business needs?
+</h3>
+            <div class="faq-content">
+              <p>Absolutely! We specialize in customized IT solutions designed to align with your business goals and technical requirements.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>Do you offer ongoing support after deployment?
+</h3>
+            <div class="faq-content">
+              <p>Yes, we provide continuous maintenance, monitoring, and technical support to ensure everything runs smoothly.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>How secure are your services?
+</h3>
+            <div class="faq-content">
+              <p>We follow industry best practices and use the latest security protocols to protect your data and infrastructure.
+</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>How do we get started with your services?
+</h3>
+            <div class="faq-content">
+              <p>Just contact us or request a free consultation—our team will guide you through the onboarding process.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Faq 2 Section -->
+
+<!-- Subscribe Section -->
+<section id="subscribe" class="subscribe section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-between align-items-center">
+      <div class="col-lg-6">
+        <div class="cta-content" data-aos="fade-up" data-aos-delay="200">
+          <h2>Subscribe to our newsletter</h2>
+          <p>Stay updated with the latest insights, trends, and updates from the IT world.
+Join our community to receive valuable tips, news, and special offers straight to your inbox.</p>
+          <form action="{% static 'assets/forms/newsletter.php' %}" method="post" class="php-email-form cta-form" data-aos="fade-up" data-aos-delay="300">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" aria-describedby="button-subscribe">
+              <button class="btn btn-primary" type="submit" id="button-subscribe">Subscribe</button>
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cta-image" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets/img/cta/cta-1.webp' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Subscribe Section -->
+
+<!-- Recent Blog Postst Section -->
+<section id="recent-blog-postst" class="recent-blog-postst section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Recent Blog Posts</h2>
+    <p></p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-5">
+
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="post-img position-relative overflow-hidden">
+            <img src="{% static 'assets/img/blog/blog-post-1.webp' %}" class="img-fluid" alt="">
+            <span class="post-date">December 12</span>
+          </div>
+
+          <div class="post-content d-flex flex-column">
+
+            <h3 class="post-title">Cloud Migration: Is Your Business Ready?
+</h3>
+<p> Explore the steps, benefits, and challenges of moving to a cloud-based infrastructure.
+</p>
+
+            <div class="meta d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+              </div>
+              <span class="px-3 text-black-50">/</span>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+              </div>
+            </div>
+
+            <hr>
+
+            <a href="{% static 'assets/blog-details.html' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- End post item -->
+
+      <div class="col-xl-4 col-md-6">
+        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="post-img position-relative overflow-hidden">
+            <img src="{% static 'assets/img/blog/blog-post-2.webp' %}" class="img-fluid" alt="">
+            <span class="post-date">July 17</span>
+          </div>
+
+          <div class="post-content d-flex flex-column">
+
+            <h3 class="post-title">5 Ways to Strengthen Your Company’s Cybersecurity
+</h3>
+<p>Learn how to protect your digital assets with actionable strategies every business should follow. </p>
+
+            <div class="meta d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+              </div>
+              <span class="px-3 text-black-50">/</span>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+              </div>
+            </div>
+
+            <hr>
+
+            <a href="{% static 'assets/blog-details.html' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- End post item -->
+
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="post-item position-relative h-100">
+
+          <div class="post-img position-relative overflow-hidden">
+            <img src="{% static 'assets/img/blog/blog-post-3.webp' %}" class="img-fluid" alt="">
+            <span class="post-date">September 05</span>
+          </div>
+
+          <div class="post-content d-flex flex-column">
+
+            <h3 class="post-title">How AI is Transforming IT Operations
+</h3>
+<p>Discover how artificial intelligence is reshaping automation, analytics, and service delivery in IT.
+</p>
+
+            <div class="meta d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
+              </div>
+              <span class="px-3 text-black-50">/</span>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+              </div>
+            </div>
+
+            <hr>
+
+            <a href="{% static 'assets/blog-details.html' %}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- End post item -->
+
+    </div>
+
+  </div>
+</section>
+
+
+    </section><!-- /Recent Blog Postst Section -->
+
+    <!-- Contact Section -->
+ {% load static %}
+
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Have questions or need a custom IT solution? We're here to help.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <div class="col-lg-5">
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Phase 1, Hinjewadi, Pune</p>
+          <p>Maharashtra, Pune 411057</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>itsolutions@gmail.com</p>
+            </div>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.6923401843014!2d73.73476897496462!3d18.587904182518773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb007e83a7d5%3A0x4cf56f63012a3307!2sHinjewadi%20Phase%201!5e0!3m2!1sen!2sus!4v1753871338155!5m2!1sen!2sus" 
+          frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          {% comment %} <iframe src=""https://maps.app.goo.gl/wMFSQb4gJZbxfizR6""
+            frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form action="{% url 'contact_form' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          {% csrf_token %}
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <label for="name-field" class="pb-2">Your Name</label>
+              <input type="text" name="name" id="name-field" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email-field" class="pb-2">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email-field" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="subject-field" class="pb-2">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject-field" required>
+            </div>
+
+            <div class="col-md-12">
+              <label for="message-field" class="pb-2">Message</label>
+              <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer id="footer" class="footer">
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-6">
+          <h4>Join Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="{% url 'newsletter_signup' %}" method="post" class="php-email-form">
+            {% csrf_token %}
+            <div class="newsletter-form">
+              <input type="email" name="email">
+              <input type="submit" value="Subscribe">
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="#home" class="d-flex align-items-center">
+          <span class="sitename">IT Solutions</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p>Phase 1, Hinjewadi, Pune</p>
+          <p>Maharashtra, Pune 411057</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@gmail.com</span></p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#service">Services</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#team">Terms of service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h4>Follow Us</h4>
+        <p></p>
+        <div class="social-links d-flex">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">IT Solutions</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      Designed by IT Solution Team
+    </div>
+  </div>
+</footer>
+<div id="chatbot-container">
+    <div id="chatbot-header" onclick="toggleChatbot()">💬 SmartDesk Bot</div>
+    <div id="chatbot-body">
+      <div id="chatbox"></div>
+      <input type="text" id="chat-input" placeholder="Type your message..." onkeydown="handleKey(event)">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+<!-- Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+<script>
+  var botui = new BotUI('botui-app');
+
+  function startChat() {
+    botui.message.add({
+      content: 'Hi! I can help you track your application. Please type your name and application ID.'
+    }).then(function () {
+      return botui.action.text({
+        action: {
+          placeholder: 'e.g. Riya A123'
+        }
+      });
+    }).then(function (res) {
+      // Send to Django
+      fetch(`/chatbot/?message=${encodeURIComponent(res.value)}`)
+        .then(response => response.json())
+        .then(data => {
+          botui.message.add({ content: data.reply });
+        });
+    });
+  }
+
+  startChat();
+</script>
+<script>
+function toggleChatbot() {
+  const body = document.getElementById("chatbot-body");
+  body.style.display = body.style.display === "flex" ? "none" : "flex";
+}
+
+function handleKey(event) {
+  if (event.key === "Enter") sendMessage();
+}
+
+function sendMessage() {
+  const input = document.getElementById("chat-input");
+  const message = input.value.trim();
+  if (!message) return;
+
+  appendMessage("You", message);
+  input.value = "";
+
+  // Show loading message
+  appendMessage("Bot", "Typing...");
+
+  fetch(`/chatbot/?message=${encodeURIComponent(message)}`)
+    .then(response => response.json())
+    .then(data => {
+      removeLastMessage(); // Remove "Typing..."
+      appendMessage("Bot", data.reply);
+    })
+    .catch(() => {
+      removeLastMessage();
+      appendMessage("Bot", "Oops! Server error. Try again.");
+    });
+}
+
+function appendMessage(sender, message) {
+  const chatbox = document.getElementById("chatbox");
+  const p = document.createElement("p");
+  p.innerHTML = `<strong>${sender}:</strong> ${message}`;
+  chatbox.appendChild(p);
+  chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function removeLastMessage() {
+  const chatbox = document.getElementById("chatbox");
+  if (chatbox.lastChild) chatbox.removeChild(chatbox.lastChild);
+}
+
+</script>
+
+
+</body>
+</html>

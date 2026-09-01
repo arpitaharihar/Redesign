@@ -1,0 +1,38 @@
+<!-- templates/registration_success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Submitted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .top-left{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+    <!-- Go to Home Button -->
+    <div class="top-left">
+        <a href="{% url 'index' %}" class="btn btn-outline-primary">Home</a>
+    </div>
+
+    <!-- Success Card -->
+    <div class="card shadow p-4" style="max-width: 500px; width: 100%;">
+        <h2 class="text-success text-center mb-3">Application Submitted Successfully!</h2>
+        <p class="text-center">
+            Thank you for applying. Our HR team will review your profile and get in touch with you within 10 days if you are shortlisted.
+        </p>
+        
+
+        <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-primary mt-3">Your ID is : {{ applicant.id }}</a>
+        </div>
+    </div>
+
+</body>
+</html>
